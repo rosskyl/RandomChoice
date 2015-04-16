@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_main">#00ff00</color>
+    <color name="background_choice">#009900</color>
+
+    <color name="button_text">#ffffff</color>
+    <color name="button_background">#003300</color>
+
+    <color name="input_text">#000000</color>
+    <color name="input_background">#00ff99</color>
+
+    <color name="instructions">#000000</color>
+</resources>
