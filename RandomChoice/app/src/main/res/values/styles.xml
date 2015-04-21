@@ -2,7 +2,6 @@
 
     <!-- Base application theme. -->
     <style name="theme_green" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:background">"@color/background_main"</item>
 
     </style>
 

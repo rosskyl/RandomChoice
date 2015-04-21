@@ -1,20 +1,20 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dip</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="padding_instructions">16dp</dimen>
-    <dimen name="padding_button">16dp</dimen>
-    <dimen name="padding_input">10dp</dimen>
+    <dimen name="padding_instructions">16dip</dimen>
+    <dimen name="padding_button">16dip</dimen>
+    <dimen name="padding_input">10dip</dimen>
 
-    <dimen name="margin_input">5dp</dimen>
+    <dimen name="margin_input">5dip</dimen>
 
     <dimen name="text_input">20sp</dimen>
     <dimen name="text_button">25sp</dimen>
     <dimen name="text_instructions">35sp</dimen>
 
-    <dimen name="input_width">300dp</dimen>
-    <dimen name="input_num_width">150dp</dimen>
+    <dimen name="input_width">300dip</dimen>
+    <dimen name="input_num_width">150dip</dimen>
 
-    <dimen name="button_submit_height">65dp</dimen>
+    <dimen name="button_submit_height">65dip</dimen>
 </resources>
