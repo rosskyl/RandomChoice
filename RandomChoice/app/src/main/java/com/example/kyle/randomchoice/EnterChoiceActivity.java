@@ -37,7 +37,6 @@ public class EnterChoiceActivity extends Activity {
 
         etChoices = new ArrayList<EditText>();
 
-        //TODO figure out scroll. Big space after submit and cant see first thing if large when keyboard shows
         for (int i = 0; i < numChoices; i += 1) {
             EditText etChoice = (EditText) LayoutInflater.from(this).inflate(R.layout.et_choices, choicesContainer, false);
             etChoices.add(etChoice);
