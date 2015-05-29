@@ -15,10 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="@dimen/text_instructions"
+        android:padding="@dimen/text_instructions_main"
         android:text="Random Choice"
         android:textColor="@color/instructions"
-        android:textSize="@dimen/text_instructions"/>
+        android:textSize="@dimen/text_instructions_main"/>
 
     <TextView
         android:id="@+id/tv_new_choice"
@@ -40,7 +40,7 @@
         android:layout_margin="@dimen/margin_input"
         android:background="@color/button_background"
         android:padding="@dimen/padding_button"
-        android:text="@string/button_reset"
+        android:text="@string/button_start_over"
         android:textColor="@color/button_text"
         android:textSize="@dimen/text_button"/>
 

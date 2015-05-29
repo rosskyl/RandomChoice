@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 try {
-                    //TODO check if numChoices > 2
                     int numChoices = Integer.parseInt(etNumChoices.getText().toString());
 
                     if (numChoices < 2) {
@@ -43,6 +42,14 @@ public class MainActivity extends Activity {
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
                     }//end if
+                    else if (numChoices > 100) {
+                        Context context = getApplicationContext();
+                        CharSequence text = "The max number of choices is 100";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    }//end else if
                     else {
 
                         Intent intent = new Intent(MainActivity.this, EnterChoiceActivity.class);

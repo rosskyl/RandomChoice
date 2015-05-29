@@ -8,13 +8,16 @@
     <dimen name="padding_input">10dip</dimen>
 
     <dimen name="margin_input">5dip</dimen>
+    <dimen name="margin_button">5dip</dimen>
+    <dimen name="Margin_image">10dip</dimen>
 
     <dimen name="text_input">20sp</dimen>
     <dimen name="text_button">25sp</dimen>
-    <dimen name="text_instructions">35sp</dimen>
+    <dimen name="text_instructions_main">35sp</dimen>
+    <dimen name="text_instructions_small">30sp</dimen>
 
     <dimen name="input_width">300dip</dimen>
     <dimen name="input_num_width">150dip</dimen>
 
-    <dimen name="button_submit_height">65dip</dimen>
+    <dimen name="button_height">65dip</dimen>
 </resources>

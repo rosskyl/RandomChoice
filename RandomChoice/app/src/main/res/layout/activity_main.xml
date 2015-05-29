@@ -12,37 +12,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="@dimen/text_instructions"
-        android:text="@string/instructions_main"
-        android:textColor="@color/instructions"
-        android:textSize="@dimen/text_instructions"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <EditText
-        android:id="@+id/et_num_choices"
-        android:layout_width="@dimen/input_num_width"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_input"
-        android:background="@color/input_background"
-        android:inputType="number"
-        android:padding="@dimen/padding_input"
-        android:textColor="@color/input_text"
-        android:textSize="@dimen/text_input"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_submit_num_choices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/margin_input"
-        android:background="@color/button_background"
-        android:padding="@dimen/padding_button"
-        android:text="@string/button_submit"
-        android:textColor="@color/button_text"
-        android:textSize="@dimen/text_button"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/text_instructions_main"
+                android:text="@string/instructions_main"
+                android:textColor="@color/instructions"
+                android:textSize="@dimen/text_instructions_main"/>
+
+            <EditText
+                android:id="@+id/et_num_choices"
+                android:layout_width="@dimen/input_num_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_input"
+                android:background="@color/input_background"
+                android:inputType="number"
+                android:padding="@dimen/padding_input"
+                android:textColor="@color/input_text"
+                android:textSize="@dimen/text_input"/>
+
+            <TextView
+                android:id="@+id/tv_submit_num_choices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_input"
+                android:background="@color/button_background"
+                android:padding="@dimen/padding_button"
+                android:text="@string/button_submit"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/text_button"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -5,6 +5,7 @@
 
     <color name="button_text">#ffffff</color>
     <color name="button_background">#003300</color>
+    <color name="button_background_secondary">#003300</color>
 
     <color name="input_text">#000000</color>
     <color name="input_background">#ffffff</color>

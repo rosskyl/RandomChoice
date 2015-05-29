@@ -1,10 +1,12 @@
 package com.example.kyle.randomchoice;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -18,6 +20,8 @@ public class ViewChoiceActivity extends Activity {
     private TextView tvNewChoice;
 
     private TextView tvReset;
+
+    private int numNewChoicePresses = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,20 @@ public class ViewChoiceActivity extends Activity {
         tvNewChoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvRandomChoice.setText(getRandomChoice());
+                if (numNewChoicePresses <= choices.length / 4) {
+                    numNewChoicePresses += 1;
+                    tvRandomChoice.setText(getRandomChoice());
+                }//end if
+                else {
+                    Context context = getApplicationContext();
+                    CharSequence text = "You have pressed that too many times. Start over for more choices";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+
+                    tvNewChoice.setVisibility(View.GONE);
+                }//end else
             }//end onClick
         });//end tvNewChoice.setOnClickListener
 

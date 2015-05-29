@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,10 @@ public class EnterChoiceActivity extends Activity {
 
     private ArrayList<EditText> etChoices;
 
+    private ImageView ivAdd;
+
+    private ImageView ivRemove;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,8 @@ public class EnterChoiceActivity extends Activity {
 
         tvSubmitChoices = (TextView) findViewById(R.id.tv_submit_choices);
         choicesContainer = (LinearLayout) findViewById(R.id.choices_container);
+        ivAdd = (ImageView) findViewById(R.id.iv_add);
+        ivRemove = (ImageView) findViewById(R.id.iv_remove);
 
         numChoices = getIntent().getIntExtra("numChoices", -1);
 
@@ -48,7 +55,7 @@ public class EnterChoiceActivity extends Activity {
             public void onClick(View v) {
                 String[] choices = new String[numChoices];
                 boolean isEmpty = false;
-                for (int i = 0; i < etChoices.size(); i += 1) {
+                for (int i = 0; i < numChoices; i += 1) {
                     String choice = etChoices.get(i).getText().toString();
                     if (choice.equals(""))
                         isEmpty = true;
@@ -71,5 +78,39 @@ public class EnterChoiceActivity extends Activity {
                 }//end else
             }//end onClick
         });//end tvSubmitChoices.setOnClickListener
+
+        ivAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (numChoices > 100) {
+                    Context context = getApplicationContext();
+                    CharSequence text = "The max number of choices is 100";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }//end if
+                else {
+                    numChoices += 1;
+                    if (numChoices <= etChoices.size()) {
+                        etChoices.get(numChoices-1).setVisibility(View.VISIBLE);
+                    }//end if
+                    else {
+                        Context context = getApplicationContext();
+                        EditText etChoice = (EditText) LayoutInflater.from(context).inflate(R.layout.et_choices, choicesContainer, false);
+                        etChoices.add(etChoice);
+                        choicesContainer.addView(etChoice);
+                    }//end else
+                }//end else
+            }//end onClick
+        });//end ivAdd.setOnClickListener
+
+        ivRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etChoices.get(numChoices-1).setVisibility(View.GONE);
+                numChoices -= 1;
+            }//end onClick
+        });//end ivRemove.setOnClickListener
     }//end onCreate method
 }//end EnterChoiceActivity class
