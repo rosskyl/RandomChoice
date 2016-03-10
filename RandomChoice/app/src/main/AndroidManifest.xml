@@ -4,7 +4,11 @@
 
     <application
         android:allowBackup="true"
+<<<<<<< HEAD
         android:icon="@drawable/icon"
+=======
+        android:icon="@mipmap/icon"
+>>>>>>> 8392dbb3a1d8907eb6ec4e10608103db236bc8cd
         android:label="@string/app_name"
         android:theme="@style/theme_green"
         >
