@@ -8,6 +8,7 @@
           android:background="@color/input_background"
           android:padding="@dimen/padding_input"
           android:textColor="@color/input_text"
+          android:singleLine="true"
           android:textSize="@dimen/text_input">
 
 </EditText>
