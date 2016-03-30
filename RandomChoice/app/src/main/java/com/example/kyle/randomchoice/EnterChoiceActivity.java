@@ -48,7 +48,7 @@ public class EnterChoiceActivity extends Activity {
             EditText etChoice = (EditText) LayoutInflater.from(this).inflate(R.layout.et_choices, choicesContainer, false);
             etChoices.add(etChoice);
             choicesContainer.addView(etChoice);
-            etChoice.setHint("Choice " + i);
+            etChoice.setHint("Choice " + (i+1));
         }//end for loop
 
         tvSubmitChoices.setOnClickListener(new View.OnClickListener() {
